@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6</title>
+    <style>
+      body {
+        background-color: #e6f2ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      h1 {
+        color: #0099cc;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Função que retorna um novo array com o dobro de cada número</h1>
+
+    <script>
+      function dobrarNumeros(array) {
+        const novoArray = [];
+
+        for (let i = 0; i < array.length; i++) {
+          novoArray.push(array[i] * 2);
+        }
+
+        return novoArray;
+      }
+
+      const numeros = [1, 2, 3, 4, 5];
+      const numerosDobrados = dobrarNumeros(numeros);
+
+      document.write("<p>Números originais: " + numeros + "</p>");
+      document.write("<p>Números dobrados: " + numerosDobrados + "</p>");
+    </script>
+  </body>
+</html>

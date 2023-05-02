@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4.1</title>
+  </head>
+  <body>
+    <div id="info-produtos"></div>
+    <script>
+      const produtos = [
+        {
+          nome: "Camiseta",
+          preco: 49.99,
+          cor: "vermelho",
+          tamanho: "M",
+          marca: "Nike",
+        },
+        {
+          nome: "Tênis",
+          preco: 299.99,
+          cor: "preto",
+          tamanho: 42,
+          marca: "Adidas",
+        },
+        {
+          nome: "Shorts",
+          preco: 79.99,
+          cor: "azul",
+          tamanho: "G",
+          marca: "Puma",
+        },
+      ];
+
+      const exibirNomeEPreco = (produtos) =>
+        produtos
+          .map((produto) => `${produto.nome} - R$ ${produto.preco.toFixed(2)}`)
+          .join("<br>");
+
+      const infoProdutos = document.getElementById("info-produtos");
+      infoProdutos.innerHTML = exibirNomeEPreco(produtos);
+    </script>
+  </body>
+</html>

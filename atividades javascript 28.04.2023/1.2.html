@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.2</title>
+  </head>
+  <body>
+    <script>
+      function formatarData(data) {
+        const dia = data.getDate().toString().padStart(2, "0");
+        const mes = (data.getMonth() + 1).toString().padStart(2, "0");
+        const ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+      }
+
+      const dataAtual = new Date();
+      const dataFormatada = formatarData(dataAtual);
+      alert(`A data de hoje é ${dataFormatada}`);
+    </script>
+  </body>
+</html>

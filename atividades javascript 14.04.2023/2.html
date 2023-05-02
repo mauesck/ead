@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			color: #333;
+			text-align: center;
+		}
+		h1 {
+			font-size: 24px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Total de caracteres</h1>
+	<p id="resultado"></p>
+
+	<script>
+		function contarCaracteres(strings) {
+			let total = 0;
+			for (let i = 0; i < strings.length; i++) {
+				total += strings[i].length;
+			}
+			return total;
+		}
+
+		let strings = ["Olá", "Mundo", "!!!"];
+		let resultado = document.querySelector("#resultado");
+		resultado.textContent = "O número total de caracteres é: " + contarCaracteres(strings);
+	</script>
+</body>
+</html>

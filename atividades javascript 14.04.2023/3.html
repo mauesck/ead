@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Retornar e-mail</h1>
+    <p id="resultado"></p>
+
+    <script>
+      const pessoas = [
+        {
+          nome: "chave",
+          email: "chave@gmail.com"
+        },
+        {
+          nome: "garrafa",
+          email: "garrafa@igmail.com"
+        },
+        {
+          nome: "focus",
+          email: "focus@outlook.com"
+        }
+      ];
+
+      function buscarEmail(nome) {
+        for (let i = 0; i < pessoas.length; i++) {
+          if (pessoas[i].nome === nome) {
+            return pessoas[i].email;
+          }
+        }
+        return "E-mail não encontrado.";
+      }
+
+      const nomeBuscado = prompt("Informe o nome da pessoa:");
+      const emailEncontrado = buscarEmail(nomeBuscado);
+
+      const resultado = document.querySelector("#resultado");
+      resultado.textContent = emailEncontrado;
+    </script>
+  </body>
+</html>

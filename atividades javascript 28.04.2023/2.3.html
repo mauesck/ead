@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.3</title>
+  </head>
+  <body>
+    <script>
+      const gerarDescricao = ({ nome, marca, preco }) =>
+        `Produto: ${nome}\nMarca: ${marca}\nPreço: R$ ${preco}`;
+
+      const produtoExemplo = {
+        nome: "Smartphone",
+        marca: "Samsung",
+        preco: 2000.00,
+      };
+
+      const descricaoProduto = gerarDescricao(produtoExemplo);
+      alert(descricaoProduto);
+    </script>
+  </body>
+</html>

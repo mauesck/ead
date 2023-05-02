@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5</title>
+    <style>
+      body {
+        background-color: #cceeff;
+        font-family: Arial;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Informações do usuário</h1>
+    <div id="informacoes"></div>
+    <script>
+      let usuario = {
+        cidade: "Joinville",
+        estado: "SC",
+        bairro: "Centro",
+        rua: "Rua dos Pinheiros",
+        numero: 123
+      };
+
+      let informacoesDiv = document.getElementById("informacoes");
+      informacoesDiv.innerHTML = `O usuário mora em ${usuario.cidade} / ${usuario.estado}, no bairro ${usuario.bairro}, na rua "${usuario.rua}" com nº ${usuario.numero}.`;
+    </script>
+  </body>
+</html>

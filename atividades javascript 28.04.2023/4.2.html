@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>4.2</title>
+</head>
+<body>
+	<h1>Tabela de Produtos</h1>
+	<table id="tabelaProdutos">
+		<thead>
+			<tr>
+				<th>Nome do Produto</th>
+				<th>Preço do Produto</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+	<script>
+		const produtos = [
+		  { nome: "Produto 1", preco: 10.0 },
+		  { nome: "Produto 2", preco: 20.0 },
+		  { nome: "Produto 3", preco: 30.0 }
+		];
+
+		const tabela = document.getElementById("tabelaProdutos");
+
+		// Função que recebe um array de objetos JSON com informações de produtos e retorna uma tabela HTML utilizando template literals e arrow function
+		const gerarTabelaProdutos = (produtos) => {
+			const linhas = produtos.map((produto) => {
+				return `
+					<tr>
+						<td>${produto.nome}</td>
+						<td>${produto.preco}</td>
+					</tr>
+				`;
+			}).join("");
+
+			tabela.querySelector("tbody").innerHTML = linhas;
+		};
+
+		// Chamando a função para gerar a tabela de produtos
+		gerarTabelaProdutos(produtos);
+	</script>
+</body>
+</html>

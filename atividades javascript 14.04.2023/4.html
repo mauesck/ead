@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #E6F2F5;
+		}
+		h1 {
+			text-align: center;
+			color: #444444;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type="submit"] {
+			margin-top: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #2E8B57;
+			color: #FFFFFF;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.resultado {
+			text-align: center;
+			margin-top: 20px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #444444;
+		}
+	</style>
+</head>
+<body>
+	<h1>Verificar Fruta</h1>
+	<form>
+		<label for="fruta">Informe a fruta:</label>
+		<input type="text" id="fruta">
+		<input type="submit" value="Verificar">
+	</form>
+	<div class="resultado" id="resultado"></div>
+	<script>
+		const frutas = ["banana", "maçã", "uva", "morango", "abacaxi"];
+
+		const verificarFruta = () => {
+			const frutaInput = document.getElementById("fruta");
+			const fruta = frutaInput.value.toLowerCase();
+			const resultado = document.getElementById("resultado");
+
+			if (frutas.includes(fruta)) {
+				resultado.textContent = `A fruta ${fruta} está presente no array.`;
+			} else {
+				resultado.textContent = `A fruta ${fruta} não está presente no array.`;
+			}
+		};
+
+		const form = document.querySelector("form");
+		form.addEventListener("submit", (event) => {
+			event.preventDefault();
+			verificarFruta();
+		});
+	</script>
+</body>
+</html>

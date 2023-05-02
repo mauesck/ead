@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.2</title>
+  </head>
+  <body>
+    <script>
+      const contarCaracteres = (strings) => strings.reduce((acc, str) => acc + str.length, 0);
+
+      const stringsExemplo = ["Olá", "mundo", "do", "JavaScript"];
+      const totalCaracteres = contarCaracteres(stringsExemplo);
+      alert(`O total de caracteres nas strings é ${totalCaracteres}`);
+    </script>
+  </body>
+</html>

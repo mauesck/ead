@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>4</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+	</style>
+</head>
+<body>
+	<h1>Validação de idade e altura</h1>
+	<form onsubmit="return validarFormulario()">
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" name="idade" min="18" max="60" required>
+		<label for="altura">Altura (cm):</label>
+		<input type="number" id="altura" name="altura" min="150" max="200" required>
+		<input type="submit" value="Validar">
+		<p class="message" id="mensagem"></p>
+	</form>
+	<script>
+		function validarFormulario() {
+			var idade = document.getElementById("idade").value;
+			var altura = document.getElementById("altura").value;
+			var mensagem = document.getElementById("mensagem");
+
+			if (idade >= 18 && idade <= 60 && altura >= 150 && altura <= 200) {
+				mensagem.innerHTML = "Formulário preenchido corretamente!";
+				mensagem.className = "message success";
+				return true;
+			} else {
+				mensagem.innerHTML = "Por favor, preencha os campos corretamente.";
+				mensagem.className = "message error";
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

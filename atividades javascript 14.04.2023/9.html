@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>9</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f2ff;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <label for="parametro">Insira o nome de uma variavel:</label>
+    <input type="text" id="parametro">
+    <button onclick="armazenaRetorna()">Armazenar e Retornar</button>
+    <div id="result"></div>
+  </div>
+  
+  <script>
+    function armazenaRetorna() {
+      const parametro = document.getElementById('parametro').value;
+      const novaVariavel = parametro;
+      document.getElementById('result').innerHTML = `A nova variável é: ${novaVariavel}`;
+    }
+  </script>
+</body>
+</html>

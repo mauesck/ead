@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5</title>
+    <style>
+      body {
+        background-color: #e3e3e3;
+        font-family: Arial;
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dobro de um número</h1>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero"><br><br>
+    <button onclick="calcularDobro()">Calcular</button><br><br>
+    <p id="resultado"></p>
+
+    <script>
+      function calcularDobro() {
+        let numero = document.getElementById("numero").value;
+        let dobro = numero * 2;
+        document.getElementById("resultado").innerHTML = `O dobro de ${numero} é ${dobro}`;
+      }
+    </script>
+  </body>
+</html>

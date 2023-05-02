@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.2</title>
+  </head>
+  <body>
+    <div id="info-produto"></div>
+    <script>
+      const produto = {
+        nome: "Camiseta",
+        preco: 49.99,
+        cor: "vermelho",
+        tamanho: "M",
+        marca: "Nike",
+      };
+
+      function exibirNomeEPreco(produto) {
+        return `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+      }
+
+      const infoProduto = document.getElementById("info-produto");
+      infoProduto.innerHTML = exibirNomeEPreco(produto);
+    </script>
+  </body>
+</html>

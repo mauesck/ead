@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Insira uma palavra ou frase:</p>
+    <input type="text" id="input-text">
+    <button onclick="contarVogais()">Contar Vogais</button>
+    <p id="output"></p>
+    <script>
+      function contarVogais() {
+        const inputText = document.getElementById("input-text").value;
+        const vogais = "aeiouAEIOU";
+        let count = 0;
+        for (let i = 0; i < inputText.length; i++) {
+          if (vogais.indexOf(inputText[i]) !== -1) {
+            count++;
+          }
+        }
+        document.getElementById("output").innerHTML = `A palavra/frase inserida contém ${count} vogais.`;
+      }
+    </script>
+  </body>
+</html>

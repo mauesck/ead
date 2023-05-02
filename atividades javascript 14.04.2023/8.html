@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8</title>
+	<style>
+		body {
+			background-color: #E6F2FF;
+			font-family: Arial;
+			color: #333;
+			text-align: center;
+		}
+		h1 {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Retornar em Maiúsculas</h1>
+	<p>Informe uma string:</p>
+	<input type="text" id="texto">
+	<button onclick="converter()">Converter</button>
+	<p id="resultado"></p>
+
+	<script>
+		function converter() {
+			let texto = document.getElementById("texto").value;
+			let maiusculas = texto.toUpperCase();
+			document.getElementById("resultado").innerHTML = maiusculas;
+		}
+	</script>
+</body>
+</html>

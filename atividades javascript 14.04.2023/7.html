@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7</title>
+	<style>
+		body {
+			font-family: Arial;
+			background-color: #c7e0f4;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>Digite o nome de um animal:</p>
+	<input type="text" id="animalInput">
+	<button onclick="verificarPosicao()">Verificar Posição</button>
+	<p id="posicao"></p>
+
+	<script>
+		let animais = ["gato", "cachorro", "leão", "tigre", "elefante"];
+
+		function verificarPosicao() {
+			let animal = document.getElementById("animalInput").value.toLowerCase();
+			let posicao = animais.indexOf(animal);
+			if (posicao === -1) {
+				document.getElementById("posicao").innerHTML = "Animal não encontrado no array";
+			} else {
+				document.getElementById("posicao").innerHTML = "O animal " + animal + " está na posição " + posicao + " do array";
+			}
+		}
+	</script>
+</body>
+</html>

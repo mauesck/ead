@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.3</title>
+  </head>
+  <body>
+    <script>
+      function exibirProduto(produto) {
+        const { nome, preco, descricao, estoque } = produto;
+        return `Nome: ${nome}
+Preço: R$ ${preco.toFixed(2)}
+Descrição: ${descricao}
+Estoque: ${estoque} unidades`;
+      }
+
+      const produtoExemplo = {
+        nome: "Celular",
+        preco: 1000,
+        descricao: "Celular bombom maumau",
+        estoque: 1,
+      };
+
+      const mensagemProduto = exibirProduto(produtoExemplo);
+      alert(mensagemProduto);
+    </script>
+  </body>
+</html>

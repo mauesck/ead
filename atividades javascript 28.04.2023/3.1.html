@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.1</title>
+  </head>
+  <body>
+    <div id="info-pessoa"></div>
+    <script>
+      const pessoa = {
+        nome: "Maria",
+        idade: 30,
+        endereco: {
+          rua: "Rua das Flores",
+          numero: 123,
+          cidade: "São Paulo",
+          estado: "SP",
+          pais: "Brasil",
+          cep: "01234-567",
+        },
+      };
+
+      const infoPessoa = document.getElementById("info-pessoa");
+      infoPessoa.innerHTML = `Nome: ${pessoa.nome}<br>Idade: ${pessoa.idade}<br>Endereço: ${pessoa.endereco.rua}, ${pessoa.endereco.numero}, ${pessoa.endereco.cidade}, ${pessoa.endereco.estado}, ${pessoa.endereco.pais}, ${pessoa.endereco.cep}`;
+    </script>
+  </body>
+</html>

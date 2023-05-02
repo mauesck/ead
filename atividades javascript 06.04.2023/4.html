@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4</title>
+    <style>
+      body {
+        background-color: #cceeff;
+        font-family: Arial;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Números de 1 a 1000</h1>
+    <div id="numeros"></div>
+    <script>
+      let numerosDiv = document.getElementById('numeros');
+      for (let i = 1; i <= 1000; i++) {
+        numerosDiv.innerHTML += i + '<br>';
+      }
+    </script>
+  </body>
+</html>

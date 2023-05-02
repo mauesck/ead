@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>1</title>
+</head>
+<body>
+<h1>Oque você deseja?</h1>
+<form>
+<label>
+<input type="radio" name="bebida" value="refrigerante"> Refrigerante
+</label><br>
+<label>
+<input type="radio" name="bebida" value="sorvete"> Sorvete
+</label><br>
+<label>
+<input type="radio" name="bebida" value="suco"> Suco
+</label><br>
+<p>
+<input type="button" value="Confirmar" onclick="selecionar()">
+</form>
+<p id="mensagem"></p>
+<script>
+function selecionar() {
+let bebida = document.querySelector('input[name="bebida"]:checked').value;
+let mensagem = document.querySelector('#mensagem');
+switch (bebida) {
+case "refrigerante":
+mensagem.textContent = "Você selecionou refrigerante!";
+// bloco de código para refrigerante
+break;
+case "sorvete":
+mensagem.textContent = "Você selecionou sorvete!";
+// bloco de código para sorvete
+break;
+case "suco":
+mensagem.textContent = "Esgotado! Escolha outro.";
+// bloco de código para suco
+break;
+default:
+mensagem.textContent = "Opção inválida!";
+// bloco de código padrão
+break;
+}
+}
+</script>
+</body>
+</html>

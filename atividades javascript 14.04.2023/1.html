@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e6f2ff;
+        text-align: center;
+      }
+      
+      h1 {
+        color: #0077b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Encontre o valor máximo em um array de números</h1>
+    <div>
+      <p>O valor máximo do array é: <span id="maximo"></span></p>
+      <p>Os números do array são: <span id="numeros"></span></p>
+    </div>
+
+    <script>
+      function encontrarMaximo(array) {
+        let maximo = array[0];
+        for (let i = 1; i < array.length; i++) {
+          if (array[i] > maximo) {
+            maximo = array[i];
+          }
+        }
+        return maximo;
+      }
+
+      const numeros = [];
+      for (let i = 0; i < 10; i++) {
+        numeros.push(Math.floor(Math.random() * 101));
+      }
+
+      const maximo = encontrarMaximo(numeros);
+
+      document.querySelector("#maximo").textContent = maximo;
+      document.querySelector("#numeros").textContent = numeros.join(", ");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4.3</title>
+</head>
+<body>
+	<h1>Lista de Produtos</h1>
+	<ul id="lista-produtos"></ul>
+
+	<script>
+		const produtos = [
+			{ nome: 'Produto 1', preco: 19.99 },
+			{ nome: 'Produto 2', preco: 25.50 },
+			{ nome: 'Produto 3', preco: 15.75 },
+			{ nome: 'Produto 4', preco: 9.90 },
+			{ nome: 'Produto 5', preco: 29.99 },
+		];
+
+		const criarListaProdutos = (produtos) => {
+			const listaProdutos = document.querySelector('#lista-produtos');
+			produtos.forEach((produto) => {
+				const li = document.createElement('li');
+				li.innerHTML = `
+					<h2>${produto.nome}</h2>
+					<p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+				`;
+				listaProdutos.appendChild(li);
+			});
+		}
+
+		criarListaProdutos(produtos);
+	</script>
+</body>
+</html>
